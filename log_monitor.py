@@ -1,7 +1,6 @@
 import re
 import time
 
-# Comprinno Tevico sarkha log monitor
 LOG_FILE = "server.log"
 
 # Sample log create 
@@ -17,7 +16,6 @@ with open(LOG_FILE, "r") as file:
     for line in file:
         if "ERROR" in line:
             print(f"🚨 ALERT DETECTED: {line.strip()}")
-            # Yethe email/SMS alert trigger
-            # print("Sending alert to admin...")
+            
 
 print("\nMonitoring complete. Total errors logged to cloud.")
